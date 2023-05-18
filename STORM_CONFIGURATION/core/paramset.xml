@@ -1,0 +1,282 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="paramset" SXmlObjectID="PARAMSET_GAMES">
+    <repository>core</repository>
+    <parentID>DATASET_GAMES</parentID>
+    <param>
+      <bind>games.`Id`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Id`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Id` LIMIT 30000</query>
+        <columnset>Id</columnset>
+        <factor>Id</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Title`</bind>
+      <type>text</type>
+      <list>
+        <query>SELECT DISTINCT
+`Title`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Title` LIMIT 30000</query>
+        <columnset>Title</columnset>
+        <factor>Title</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Rating`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`Rating`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Rating` LIMIT 30000</query>
+        <columnset>Rating</columnset>
+        <factor>Rating</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Times_listed`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Times_listed`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Times_listed` LIMIT 30000</query>
+        <columnset>Times_listed</columnset>
+        <factor>Times_listed</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Number_of_reviews`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Number_of_reviews`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Number_of_reviews` LIMIT 30000</query>
+        <columnset>Number_of_reviews</columnset>
+        <factor>Number_of_reviews</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Summary`</bind>
+      <type>text</type>
+      <list>
+        <query>SELECT DISTINCT
+`Summary`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Summary` LIMIT 30000</query>
+        <columnset>Summary</columnset>
+        <factor>Summary</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Plays`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Plays`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Plays` LIMIT 30000</query>
+        <columnset>Plays</columnset>
+        <factor>Plays</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Playing`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Playing`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Playing` LIMIT 30000</query>
+        <columnset>Playing</columnset>
+        <factor>Playing</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Backlogs`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Backlogs`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Backlogs` LIMIT 30000</query>
+        <columnset>Backlogs</columnset>
+        <factor>Backlogs</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Wishlist`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Wishlist`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Wishlist` LIMIT 30000</query>
+        <columnset>Wishlist</columnset>
+        <factor>Wishlist</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Year`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Year`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Year` LIMIT 30000</query>
+        <columnset>Year</columnset>
+        <factor>Year</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Month`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Month`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Month` LIMIT 30000</query>
+        <columnset>Month</columnset>
+        <factor>Month</factor>
+      </list>
+    </param>
+    <param>
+      <bind>games.`Day`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Day`
+FROM `${SCHEMA}`.`games` games
+ORDER BY `Day` LIMIT 30000</query>
+        <columnset>Day</columnset>
+        <factor>Day</factor>
+      </list>
+    </param>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="paramset" SXmlObjectID="PARAMSET_GENRES">
+    <repository>core</repository>
+    <parentID>DATASET_GENRES</parentID>
+    <param>
+      <bind>genres.`id`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`id`
+FROM `${SCHEMA}`.`genres` genres
+ORDER BY `id` LIMIT 30000</query>
+        <columnset>id</columnset>
+        <factor>id</factor>
+      </list>
+    </param>
+    <param>
+      <bind>genres.`genre`</bind>
+      <type>string</type>
+      <list enabled="true">
+        <query>SELECT DISTINCT
+`genre`
+FROM `${SCHEMA}`.`genres` genres
+ORDER BY `genre` LIMIT 30000</query>
+        <columnset>genre</columnset>
+        <factor>genre</factor>
+      </list>
+    </param>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="paramset" SXmlObjectID="PARAMSET_QUERY_LIMIT">
+    <repository>core</repository>
+    <param>
+      <bind>${LIMIT}</bind>
+      <type>integer</type>
+      <icon>fa/stop-circle/regular</icon>
+      <alias>Query limit</alias>
+      <flags>
+        <show>true</show>
+        <escaped>false</escaped>
+        <mandatory>true</mandatory>
+        <enableOperators>false</enableOperators>
+      </flags>
+      <defaultValue>30000</defaultValue>
+    </param>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="paramset" SXmlObjectID="PARAMSET_SALES">
+    <repository>core</repository>
+    <parentID>DATASET_SALES</parentID>
+    <param>
+      <bind>sales.`Id`</bind>
+      <type>integer</type>
+      <list>
+        <query>SELECT DISTINCT
+`Id`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `Id` LIMIT 30000</query>
+        <columnset>Id</columnset>
+        <factor>Id</factor>
+      </list>
+    </param>
+    <param>
+      <bind>sales.`North_America_Sales`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`North_America_Sales`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `North_America_Sales` LIMIT 30000</query>
+        <columnset>North_America_Sales</columnset>
+        <factor>North_America_Sales</factor>
+      </list>
+    </param>
+    <param>
+      <bind>sales.`Europe_Sales`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`Europe_Sales`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `Europe_Sales` LIMIT 30000</query>
+        <columnset>Europe_Sales</columnset>
+        <factor>Europe_Sales</factor>
+      </list>
+    </param>
+    <param>
+      <bind>sales.`Japan_Sales`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`Japan_Sales`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `Japan_Sales` LIMIT 30000</query>
+        <columnset>Japan_Sales</columnset>
+        <factor>Japan_Sales</factor>
+      </list>
+    </param>
+    <param>
+      <bind>sales.`Other_Sales`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`Other_Sales`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `Other_Sales` LIMIT 30000</query>
+        <columnset>Other_Sales</columnset>
+        <factor>Other_Sales</factor>
+      </list>
+    </param>
+    <param>
+      <bind>sales.`Global_Sales`</bind>
+      <type>float</type>
+      <list>
+        <query>SELECT DISTINCT
+`Global_Sales`
+FROM `${SCHEMA}`.`sales` sales
+ORDER BY `Global_Sales` LIMIT 30000</query>
+        <columnset>Global_Sales</columnset>
+        <factor>Global_Sales</factor>
+      </list>
+    </param>
+  </SXmlObject>
+</storm>

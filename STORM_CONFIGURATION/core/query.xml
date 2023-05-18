@@ -1,0 +1,87 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="query" SXmlObjectID="QUERY_GAMES">
+    <repository>core</repository>
+    <parentID>games</parentID>
+    <defaultExpression>Id, Title, Rating, Times_listed, Number_of_reviews, Summary, Plays, Playing, Backlogs, Wishlist, Year, Month, Day</defaultExpression>
+    <data>SELECT 
+-- {% if reduced %}
+games.*
+${REPLACE_GAMES_SELECT_REDUCED}
+--
+-- {% else %}
+games.*
+${REPLACE_GAMES_SELECT}
+--
+
+--
+-- {% endif %}
+--
+FROM `${SCHEMA}`.`games` games
+--
+
+--
+WHERE ${PARAMS}
+--
+AND ${CONTEXT}
+--
+LIMIT ${LIMIT}</data>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="query" SXmlObjectID="QUERY_GENRES">
+    <repository>core</repository>
+    <parentID>genres</parentID>
+    <defaultExpression>id, genre</defaultExpression>
+    <data>SELECT 
+-- {% if reduced %}
+genres.*
+${REPLACE_GENRES_SELECT_REDUCED}
+--
+-- {% else %}
+genres.*
+${REPLACE_GENRES_SELECT}
+--
+${REPLACE_GAMES_JOIN(games)}
+--
+-- {% endif %}
+--
+FROM `${SCHEMA}`.`genres` genres
+--
+LEFT JOIN `${SCHEMA}`.`games` games ON (genres.`id` = games.`Id`)
+--
+WHERE ${PARAMS}
+--
+AND ${CONTEXT}
+--
+LIMIT ${LIMIT}</data>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="query" SXmlObjectID="QUERY_SALES">
+    <repository>core</repository>
+    <parentID>sales</parentID>
+    <defaultExpression>Id, North_America_Sales, Europe_Sales, Japan_Sales, Other_Sales, Global_Sales</defaultExpression>
+    <data>-- [list of duplicated columns below]
+-- Id [sales,games]
+
+
+SELECT 
+-- {% if reduced %}
+sales.*
+${REPLACE_SALES_SELECT_REDUCED}
+--
+-- {% else %}
+sales.*
+${REPLACE_SALES_SELECT}
+--
+${REPLACE_GAMES_JOIN(games)}
+--
+-- {% endif %}
+--
+FROM `${SCHEMA}`.`sales` sales
+--
+LEFT JOIN `${SCHEMA}`.`games` games ON (sales.`Id` = games.`Id`)
+--
+WHERE ${PARAMS}
+--
+AND ${CONTEXT}
+--
+LIMIT ${LIMIT}</data>
+  </SXmlObject>
+</storm>

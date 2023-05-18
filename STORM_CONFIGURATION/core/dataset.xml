@@ -1,0 +1,46 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectID="DATASET_GAMES">
+    <repository>core</repository>
+    <parentID>games</parentID>
+    <defaultDashboard>DASHBOARD_GAMES</defaultDashboard>
+    <queries>
+      <query>QUERY_GAMES</query>
+    </queries>
+    <paramset><![CDATA[["PARAMSET_QUERY_LIMIT","PARAMSET_GAMES"]]]></paramset>
+    <drilldown SXmlObjectID="DRILLDOWN_GAMES">
+      <parentID>games</parentID>
+      <drilldown>
+        <dataset>DATASET_GENRES</dataset>
+        <link>Id:genres.id</link>
+      </drilldown>
+      <drilldown>
+        <dataset>DATASET_SALES</dataset>
+        <link>Id:sales.Id</link>
+      </drilldown>
+    </drilldown>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectID="DATASET_GENRES">
+    <repository>core</repository>
+    <parentID>genres</parentID>
+    <defaultDashboard>DASHBOARD_GENRES</defaultDashboard>
+    <queries>
+      <query>QUERY_GENRES</query>
+    </queries>
+    <paramset><![CDATA[["PARAMSET_QUERY_LIMIT","PARAMSET_GENRES","PARAMSET_GAMES"]]]></paramset>
+    <drilldown SXmlObjectID="DRILLDOWN_GENRES">
+      <parentID>genres</parentID>
+    </drilldown>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectID="DATASET_SALES">
+    <repository>core</repository>
+    <parentID>sales</parentID>
+    <defaultDashboard>DASHBOARD_SALES</defaultDashboard>
+    <queries>
+      <query>QUERY_SALES</query>
+    </queries>
+    <paramset><![CDATA[["PARAMSET_QUERY_LIMIT","PARAMSET_SALES","PARAMSET_GAMES"]]]></paramset>
+    <drilldown SXmlObjectID="DRILLDOWN_SALES">
+      <parentID>sales</parentID>
+    </drilldown>
+  </SXmlObject>
+</storm>

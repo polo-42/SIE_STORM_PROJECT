@@ -1,0 +1,111 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Backlogs">
+    <repository>core</repository>
+    <parentID>Backlogs</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Day">
+    <repository>core</repository>
+    <parentID>Day</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Europe_Sales">
+    <repository>core</repository>
+    <parentID>Europe_Sales</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Global_Sales">
+    <repository>core</repository>
+    <parentID>Global_Sales</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Id">
+    <repository>core</repository>
+    <parentID>Id</parentID>
+    <options>
+      <style>STYLE_PK</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Japan_Sales">
+    <repository>core</repository>
+    <parentID>Japan_Sales</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Month">
+    <repository>core</repository>
+    <parentID>Month</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="North_America_Sales">
+    <repository>core</repository>
+    <parentID>North_America_Sales</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Number_of_reviews">
+    <repository>core</repository>
+    <parentID>Number_of_reviews</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Other_Sales">
+    <repository>core</repository>
+    <parentID>Other_Sales</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Playing">
+    <repository>core</repository>
+    <parentID>Playing</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Plays">
+    <repository>core</repository>
+    <parentID>Plays</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Rating">
+    <repository>core</repository>
+    <parentID>Rating</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Summary">
+    <repository>core</repository>
+    <parentID>Summary</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Times_listed">
+    <repository>core</repository>
+    <parentID>Times_listed</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Title">
+    <repository>core</repository>
+    <parentID>Title</parentID>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Wishlist">
+    <repository>core</repository>
+    <parentID>Wishlist</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Year">
+    <repository>core</repository>
+    <parentID>Year</parentID>
+    <options>
+      <style>STYLE_INTEGER</style>
+    </options>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="genre">
+    <repository>core</repository>
+    <parentID>genre</parentID>
+    <options>
+      <style>STYLE_PK</style>
+    </options>
+  </SXmlObject>
+</storm>

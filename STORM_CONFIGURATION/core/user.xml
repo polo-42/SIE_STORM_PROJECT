@@ -1,0 +1,6 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="user" SXmlObjectID="storm">
+    <repository>core</repository>
+    <repositories><![CDATA[["core","business"]]]></repositories>
+  </SXmlObject>
+</storm>

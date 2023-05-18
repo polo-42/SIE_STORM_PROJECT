@@ -1,0 +1,15 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="database" SXmlObjectSEQ="3" SXmlObjectID="DATABASE_GAMES">
+    <repository>core</repository>
+    <alias>Games</alias>
+    <owner>storm</owner>
+    <engine>mysql</engine>
+    <driver>QMYSQL</driver>
+    <host>db-storm-games-do-user-14118989-0.b.db.ondigitalocean.com</host>
+    <port>25060</port>
+    <user>doadmin</user>
+    <pass>AVNS_7hInLF2HJWHTl3J2ASP</pass>
+    <dsn>games</dsn>
+    <schema>games</schema>
+  </SXmlObject>
+</storm>

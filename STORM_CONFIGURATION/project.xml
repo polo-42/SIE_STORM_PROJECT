@@ -1,0 +1,19 @@
+<SXmlObject SXmlObjectTYPE="project" SXmlObjectID="STORM_CONFIGUR">
+  <data>
+    <repository>
+      <id>core</id>
+      <path>core</path>
+    </repository>
+    <repository>
+      <id>business</id>
+      <path>business</path>
+    </repository>
+  </data>
+  <login>
+    <enabled>true</enabled>
+    <user>storm</user>
+  </login>
+  <options>
+    <systemUser>storm</systemUser>
+  </options>
+</SXmlObject>

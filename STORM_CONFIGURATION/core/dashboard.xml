@@ -1,0 +1,98 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_GAMES">
+    <repository>core</repository>
+    <data dataset="DATASET_GAMES" UID="{68f2a975-079a-4b55-a970-52d877101b27}">
+      <data dataset="DATASET_GENRES" UID="{1da2f867-ddf9-4312-8975-899972309695}" link="Id:genres.id"/>
+      <data dataset="DATASET_SALES" UID="{48a7f0ee-fd03-4ab8-87e7-578c1c85ed0d}" link="Id:sales.Id"/>
+    </data>
+    <page>
+      <alias>Page</alias>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>1</width>
+          <height>1</height>
+        </geometry>
+        <view>
+          <SXmlObject SXmlObjectTYPE="list">
+            <dataFilter/>
+            <columnset>
+              <factor>Id</factor>
+              <factor>Title</factor>
+              <factor>Rating</factor>
+              <factor>Times_listed</factor>
+              <factor>Number_of_reviews</factor>
+              <factor>Summary</factor>
+              <factor>Plays</factor>
+              <factor>Playing</factor>
+              <factor>Backlogs</factor>
+              <factor>Wishlist</factor>
+              <factor>Year</factor>
+              <factor>Month</factor>
+              <factor>Day</factor>
+            </columnset>
+            <sort/>
+          </SXmlObject>
+        </view>
+      </widget>
+    </page>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_GENRES">
+    <repository>core</repository>
+    <data dataset="DATASET_GENRES" UID="{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}"/>
+    <page>
+      <alias>Page</alias>
+      <widget>
+        <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>1</width>
+          <height>1</height>
+        </geometry>
+        <view>
+          <SXmlObject SXmlObjectTYPE="list">
+            <dataFilter/>
+            <columnset>
+              <factor>id</factor>
+              <factor>genre</factor>
+            </columnset>
+            <sort/>
+          </SXmlObject>
+        </view>
+      </widget>
+    </page>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_SALES">
+    <repository>core</repository>
+    <data dataset="DATASET_SALES" UID="{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}"/>
+    <page>
+      <alias>Page</alias>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>1</width>
+          <height>1</height>
+        </geometry>
+        <view>
+          <SXmlObject SXmlObjectTYPE="list">
+            <dataFilter/>
+            <columnset>
+              <factor>Id</factor>
+              <factor>North_America_Sales</factor>
+              <factor>Europe_Sales</factor>
+              <factor>Japan_Sales</factor>
+              <factor>Other_Sales</factor>
+              <factor>Global_Sales</factor>
+            </columnset>
+            <sort/>
+          </SXmlObject>
+        </view>
+      </widget>
+    </page>
+  </SXmlObject>
+</storm>
