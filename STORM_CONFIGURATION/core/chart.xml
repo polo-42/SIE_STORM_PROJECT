@@ -1,0 +1,244 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_NOMBRE_DE_GENRE_DISTINCT">
+    <repository>core</repository>
+    <alias>Nombre de genre distinct</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>bar</type>
+        <factor>genre</factor>
+        <function>COUNT_DISTINCT</function>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_GENRES">
+    <repository>core</repository>
+    <alias>Nombre Genres</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>pie</type>
+        <factor>genre</factor>
+        <function>COUNT</function>
+        <dimension>genre</dimension>
+        <colorByPoint>true</colorByPoint>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_SALES">
+    <repository>core</repository>
+    <alias>Total Sales</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+      <sort>code</sort>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>column</type>
+        <factor>Europe_Sales</factor>
+      </value>
+      <value>
+        <type>column</type>
+        <factor>North_America_Sales</factor>
+      </value>
+      <value>
+        <type>column</type>
+        <factor>Japan_Sales</factor>
+      </value>
+      <value>
+        <type>column</type>
+        <factor>Other_Sales</factor>
+      </value>
+      <value>
+        <type>column</type>
+        <factor>Global_Sales</factor>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_GAMES">
+    <repository>core</repository>
+    <alias>Wordcloud ratings</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>wordcloud</type>
+        <factor>Rating</factor>
+        <dimension>Title</dimension>
+        <limitDimension>10</limitDimension>
+        <colorByPoint>true</colorByPoint>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_GENRES_1">
+    <repository>core</repository>
+    <alias>Wordcloud Genre</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>wordcloud</type>
+        <factor>genre</factor>
+        <dimension>genre</dimension>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_GENRES_2">
+    <repository>core</repository>
+    <alias>Ratings by year</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>column</type>
+        <factor>Rating</factor>
+        <dimension>Year</dimension>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+</storm>

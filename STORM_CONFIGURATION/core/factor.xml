@@ -43,9 +43,10 @@
     <repository>core</repository>
     <parentID>North_America_Sales</parentID>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Number_of_reviews">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="3" SXmlObjectID="Number_of_reviews">
     <repository>core</repository>
     <parentID>Number_of_reviews</parentID>
+    <totalFunction>SUM</totalFunction>
     <options>
       <style>STYLE_INTEGER</style>
     </options>
@@ -61,24 +62,31 @@
       <style>STYLE_INTEGER</style>
     </options>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Plays">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="1" SXmlObjectID="Plays">
     <repository>core</repository>
     <parentID>Plays</parentID>
+    <totalFunction>SUM</totalFunction>
     <options>
       <style>STYLE_INTEGER</style>
     </options>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Rating">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="1" SXmlObjectID="Rating">
     <repository>core</repository>
     <parentID>Rating</parentID>
+    <totalFunction>AVG</totalFunction>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Summary">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="5" SXmlObjectID="Summary">
     <repository>core</repository>
     <parentID>Summary</parentID>
+    <pointer>
+      <datasource>Title</datasource>
+      <link>Title</link>
+    </pointer>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="Times_listed">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="1" SXmlObjectID="Times_listed">
     <repository>core</repository>
     <parentID>Times_listed</parentID>
+    <totalFunction>SUM</totalFunction>
     <options>
       <style>STYLE_INTEGER</style>
     </options>
@@ -101,9 +109,10 @@
       <style>STYLE_INTEGER</style>
     </options>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectID="genre">
+  <SXmlObject SXmlObjectTYPE="factor" SXmlObjectSEQ="5" SXmlObjectID="genre">
     <repository>core</repository>
     <parentID>genre</parentID>
+    <totalFunction>COUNT</totalFunction>
     <options>
       <style>STYLE_PK</style>
     </options>

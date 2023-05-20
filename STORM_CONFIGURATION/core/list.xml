@@ -1,0 +1,102 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="4" SXmlObjectID="LIST_JEUX">
+    <repository>core</repository>
+    <alias>Jeux</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <stretchAllColumns>true</stretchAllColumns>
+    <columnset>
+      <factor>Title</factor>
+      <factor>Rating</factor>
+      <factor>Plays</factor>
+      <factor>Number_of_reviews</factor>
+      <factor>Times_listed</factor>
+      <factor>Year</factor>
+    </columnset>
+    <sort>
+      <sort>
+        <factor>Title</factor>
+      </sort>
+    </sort>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="2" SXmlObjectID="LIST_JEUX_PAR_ANNÉE">
+    <repository>core</repository>
+    <alias>Jeux par année</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <stretchAllColumns>true</stretchAllColumns>
+    <columnset>
+      <factor>Title</factor>
+      <factor>Rating</factor>
+      <factor>Plays</factor>
+      <factor>Number_of_reviews</factor>
+      <factor>Times_listed</factor>
+      <factor>Year</factor>
+    </columnset>
+    <sort>
+      <sort>
+        <factor>Year</factor>
+        <descending>true</descending>
+        <breakLine>true</breakLine>
+      </sort>
+    </sort>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="4" SXmlObjectID="LIST_JEUX_PAR_RATING">
+    <repository>core</repository>
+    <alias>Jeux par rating</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <stretchAllColumns>true</stretchAllColumns>
+    <columnset>
+      <factor>Title</factor>
+      <factor>Rating</factor>
+      <factor>Plays</factor>
+      <factor>Number_of_reviews</factor>
+      <factor>Times_listed</factor>
+      <factor>Year</factor>
+    </columnset>
+    <sort>
+      <sort>
+        <factor>Rating</factor>
+        <descending>true</descending>
+        <breakLine>true</breakLine>
+      </sort>
+    </sort>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_GAMES">
+    <repository>core</repository>
+    <alias>Résumé</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter>
+      <filter>
+        <factor>Title</factor>
+        <compare>Matches</compare>
+      </filter>
+    </dataFilter>
+    <sortable>false</sortable>
+    <stretchAllColumns>true</stretchAllColumns>
+    <showTotalForSingleLine>false</showTotalForSingleLine>
+    <showGrandTotal>false</showGrandTotal>
+    <rowHeight>7</rowHeight>
+    <columnset>
+      <factor>Summary</factor>
+    </columnset>
+    <sort/>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_GENRES">
+    <repository>core</repository>
+    <alias>Genres</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <stretchLastColumn>true</stretchLastColumn>
+    <columnset>
+      <factor>genre</factor>
+    </columnset>
+    <sort/>
+  </SXmlObject>
+</storm>

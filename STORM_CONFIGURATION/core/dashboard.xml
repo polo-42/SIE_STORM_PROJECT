@@ -1,75 +1,163 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_GAMES">
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="14" SXmlObjectID="DASHBOARD_GAMES">
     <repository>core</repository>
     <data dataset="DATASET_GAMES" UID="{68f2a975-079a-4b55-a970-52d877101b27}">
       <data dataset="DATASET_GENRES" UID="{1da2f867-ddf9-4312-8975-899972309695}" link="Id:genres.id"/>
       <data dataset="DATASET_SALES" UID="{48a7f0ee-fd03-4ab8-87e7-578c1c85ed0d}" link="Id:sales.Id"/>
     </data>
     <page>
-      <alias>Page</alias>
+      <alias>Résumé des jeux</alias>
       <widget>
         <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
         <geometry>
           <x>0</x>
           <y>0</y>
-          <width>1</width>
+          <width>0.5</width>
           <height>1</height>
         </geometry>
-        <view>
-          <SXmlObject SXmlObjectTYPE="list">
-            <dataFilter/>
-            <columnset>
-              <factor>Id</factor>
-              <factor>Title</factor>
-              <factor>Rating</factor>
-              <factor>Times_listed</factor>
-              <factor>Number_of_reviews</factor>
-              <factor>Summary</factor>
-              <factor>Plays</factor>
-              <factor>Playing</factor>
-              <factor>Backlogs</factor>
-              <factor>Wishlist</factor>
-              <factor>Year</factor>
-              <factor>Month</factor>
-              <factor>Day</factor>
-            </columnset>
-            <sort/>
-          </SXmlObject>
-        </view>
+        <view>LIST_JEUX</view>
+      </widget>
+      <widget>
+        <dataUID>{1da2f867-ddf9-4312-8975-899972309695}</dataUID>
+        <geometry>
+          <x>0.5</x>
+          <y>0.5</y>
+          <width>0.5</width>
+          <height>0.5</height>
+        </geometry>
+        <view>CHART_GENRES_1</view>
+      </widget>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.5</x>
+          <y>0</y>
+          <width>0.5</width>
+          <height>0.5</height>
+        </geometry>
+        <view>LIST_GAMES</view>
       </widget>
     </page>
-  </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_GENRES">
-    <repository>core</repository>
-    <data dataset="DATASET_GENRES" UID="{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}"/>
     <page>
-      <alias>Page</alias>
+      <alias>Ratings</alias>
       <widget>
-        <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
+        <dataUID>{1da2f867-ddf9-4312-8975-899972309695}</dataUID>
         <geometry>
           <x>0</x>
           <y>0</y>
           <width>1</width>
           <height>1</height>
         </geometry>
+        <view>CHART_NOMBRE_DE_GENRE_DISTINCT</view>
+      </widget>
+    </page>
+    <page>
+      <alias>Meilleurs Ratings</alias>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>0.725</width>
+          <height>1</height>
+        </geometry>
         <view>
-          <SXmlObject SXmlObjectTYPE="list">
+          <SXmlObject SXmlObjectTYPE="chart">
+            <alias>Best ratings</alias>
             <dataFilter/>
-            <columnset>
-              <factor>id</factor>
-              <factor>genre</factor>
-            </columnset>
-            <sort/>
+            <xAxis>
+              <type>category</type>
+              <title>Best 20 ratings</title>
+              <showTitle>true</showTitle>
+            </xAxis>
+            <legend>
+              <title>Best 20 ratings</title>
+              <layout>horizontal</layout>
+            </legend>
+            <series>
+              <value>
+                <type>column</type>
+                <factor>Rating</factor>
+                <dimension>Title</dimension>
+                <limitDimension>50</limitDimension>
+                <connectNulls>false</connectNulls>
+              </value>
+            </series>
+            <annotations>
+              <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+            </annotations>
           </SXmlObject>
         </view>
       </widget>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.725</x>
+          <y>0</y>
+          <width>0.275</width>
+          <height>1</height>
+        </geometry>
+        <view>CHART_GAMES</view>
+      </widget>
     </page>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectID="DASHBOARD_SALES">
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="8" SXmlObjectID="DASHBOARD_GENRES">
+    <repository>core</repository>
+    <autoLoad>true</autoLoad>
+    <data dataset="DATASET_GENRES" UID="{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}"/>
+    <page>
+      <alias>Les genres</alias>
+      <widget>
+        <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.625</y>
+          <width>0.45</width>
+          <height>0.375</height>
+        </geometry>
+        <view>CHART_NOMBRE_DE_GENRE_DISTINCT</view>
+      </widget>
+      <widget>
+        <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>0.45</width>
+          <height>0.625</height>
+        </geometry>
+        <view>LIST_GENRES</view>
+      </widget>
+      <widget>
+        <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
+        <geometry>
+          <x>0.45</x>
+          <y>0</y>
+          <width>0.55</width>
+          <height>1</height>
+        </geometry>
+        <view>CHART_GENRES</view>
+      </widget>
+    </page>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="6" SXmlObjectID="DASHBOARD_SALES">
     <repository>core</repository>
     <data dataset="DATASET_SALES" UID="{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}"/>
     <page>
-      <alias>Page</alias>
+      <alias>Résumé des ventes</alias>
       <widget>
         <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
         <geometry>
@@ -92,6 +180,22 @@
             <sort/>
           </SXmlObject>
         </view>
+      </widget>
+    </page>
+    <page>
+      <alias>Profits générés</alias>
+    </page>
+    <page>
+      <alias>Ventes totales par régions</alias>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>1</width>
+          <height>1</height>
+        </geometry>
+        <view>CHART_SALES</view>
       </widget>
     </page>
   </SXmlObject>
