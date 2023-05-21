@@ -1,7 +1,7 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_NOMBRE_DE_GENRE_DISTINCT">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="4" SXmlObjectID="CHART_NOMBRE_DE_GENRE_DISTINCT">
     <repository>core</repository>
-    <alias>Nombre de genre distinct</alias>
+    <alias>Total of genres</alias>
     <parentID>DATASET_GENRES</parentID>
     <owner>storm</owner>
     <dataFilter/>
@@ -36,9 +36,9 @@
 ]]]></data>
     </annotations>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_GENRES">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="2" SXmlObjectID="CHART_GENRES">
     <repository>core</repository>
-    <alias>Nombre Genres</alias>
+    <alias>Genres pie</alias>
     <parentID>DATASET_GENRES</parentID>
     <owner>storm</owner>
     <dataFilter/>
@@ -75,9 +75,9 @@
 ]]]></data>
     </annotations>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_SALES">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_SALES">
     <repository>core</repository>
-    <alias>Total Sales</alias>
+    <alias>Total Sales (in Millions of $)</alias>
     <parentID>DATASET_SALES</parentID>
     <owner>storm</owner>
     <dataFilter/>
@@ -128,21 +128,30 @@
 ]]]></data>
     </annotations>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_GAMES">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_GAMES">
     <repository>core</repository>
-    <alias>Wordcloud ratings</alias>
+    <alias>Best ratings</alias>
     <parentID>DATASET_GAMES</parentID>
     <owner>storm</owner>
     <dataFilter/>
     <xAxis>
-      <type>category</type>
+      <type>linear</type>
+      <sort>alpha-down</sort>
+      <enableLabels>false</enableLabels>
     </xAxis>
     <legend>
+      <enabled>true</enabled>
       <layout>horizontal</layout>
+      <verticalAlign>top</verticalAlign>
     </legend>
+    <options3d>
+      <enabled>true</enabled>
+      <alpha>30</alpha>
+      <beta>10</beta>
+    </options3d>
     <series>
       <value>
-        <type>wordcloud</type>
+        <type>bar</type>
         <factor>Rating</factor>
         <dimension>Title</dimension>
         <limitDimension>10</limitDimension>
@@ -221,6 +230,345 @@
         <type>column</type>
         <factor>Rating</factor>
         <dimension>Year</dimension>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="4" SXmlObjectID="CHART_SALES_1">
+    <repository>core</repository>
+    <alias>Sales chart</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+      <showTitle>true</showTitle>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>bar</type>
+        <factor>North_America_Sales</factor>
+        <dimension>Year</dimension>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="6" SXmlObjectID="CHART_SALES_2">
+    <repository>core</repository>
+    <alias>Sales chart</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <dimension>sales</dimension>
+      <type>category</type>
+      <sort>code</sort>
+    </xAxis>
+    <legend>
+      <enabled>true</enabled>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>bar</type>
+        <factor>North_America_Sales</factor>
+      </value>
+      <value>
+        <type>bar</type>
+        <factor>Europe_Sales</factor>
+      </value>
+      <value>
+        <type>bar</type>
+        <factor>Japan_Sales</factor>
+      </value>
+      <value>
+        <type>bar</type>
+        <factor>Other_Sales</factor>
+      </value>
+      <value>
+        <type>bar</type>
+        <factor>Global_Sales</factor>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="1" SXmlObjectID="CHART_SALES_3">
+    <repository>core</repository>
+    <alias>Sales pie</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>pie</type>
+        <factor>Global_Sales</factor>
+        <dimension>Europe_Sales, Japan_Sales, North_America_Sales, Other_Sales</dimension>
+        <stackType>normal</stackType>
+        <colorByPoint>true</colorByPoint>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="2" SXmlObjectID="CHART_SALES_4">
+    <repository>core</repository>
+    <alias>Sales wordcloud</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>wordcloud</type>
+        <factor>Europ sales</factor>
+        <colorByPoint>true</colorByPoint>
+      </value>
+      <value>
+        <type>wordcloud</type>
+        <factor>Japan_Sales</factor>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="15" SXmlObjectID="CHART_SALES_5">
+    <repository>core</repository>
+    <alias>Sales importance by region</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>linear</type>
+      <sort>total</sort>
+      <enableLabels>false</enableLabels>
+    </xAxis>
+    <legend>
+      <enabled>true</enabled>
+      <layout>vertical</layout>
+      <align>left</align>
+    </legend>
+    <series>
+      <value>
+        <type>packedbubble</type>
+        <factor>North_America_Sales</factor>
+      </value>
+      <value>
+        <type>packedbubble</type>
+        <factor>Europe_Sales</factor>
+      </value>
+      <value>
+        <type>packedbubble</type>
+        <factor>Japan_Sales</factor>
+      </value>
+      <value>
+        <type>packedbubble</type>
+        <factor>Other_Sales</factor>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectID="CHART_GAMES_1">
+    <repository>core</repository>
+    <alias>Games ratings colonne</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>column</type>
+        <factor>Rating</factor>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="3" SXmlObjectID="CHART_GAMES_2">
+    <repository>core</repository>
+    <alias>More represented ratings</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>wordcloud</type>
+        <factor>1</factor>
+        <dimension>Rating</dimension>
+        <limitDimension>40</limitDimension>
+        <colorByPoint>true</colorByPoint>
+      </value>
+    </series>
+    <annotations>
+      <data><![CDATA[[
+  {
+    "labels": [
+      {
+        "point": {
+          "x": 1,
+          "y": 1
+        },
+        "text": "Some free text",
+        "backgroundColor": "darkgray",
+        "borderColor": "lightgray"
+      }
+    ]
+  }
+]]]></data>
+    </annotations>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="2" SXmlObjectID="CHART_GENRES_3">
+    <repository>core</repository>
+    <alias>Wordcloud Genres</alias>
+    <parentID>DATASET_GENRES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <xAxis>
+      <type>category</type>
+    </xAxis>
+    <legend>
+      <layout>horizontal</layout>
+    </legend>
+    <series>
+      <value>
+        <type>wordcloud</type>
+        <factor>genre</factor>
+        <function>COUNT</function>
+        <dimension>Genre</dimension>
+        <colorByPoint>true</colorByPoint>
       </value>
     </series>
     <annotations>

@@ -1,11 +1,12 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="4" SXmlObjectID="LIST_JEUX">
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_JEUX">
     <repository>core</repository>
-    <alias>Jeux</alias>
+    <alias>Games</alias>
     <parentID>DATASET_GAMES</parentID>
     <owner>storm</owner>
     <dataFilter/>
-    <stretchAllColumns>true</stretchAllColumns>
+    <stretchLastColumn>true</stretchLastColumn>
+    <rowHeight>4</rowHeight>
     <columnset>
       <factor>Title</factor>
       <factor>Rating</factor>
@@ -13,6 +14,7 @@
       <factor>Number_of_reviews</factor>
       <factor>Times_listed</factor>
       <factor>Year</factor>
+      <factor>Summary</factor>
     </columnset>
     <sort>
       <sort>
@@ -20,13 +22,14 @@
       </sort>
     </sort>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="2" SXmlObjectID="LIST_JEUX_PAR_ANNÉE">
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="5" SXmlObjectID="LIST_JEUX_PAR_ANNÉE">
     <repository>core</repository>
-    <alias>Jeux par année</alias>
+    <alias>Games by years</alias>
     <parentID>DATASET_GAMES</parentID>
     <owner>storm</owner>
     <dataFilter/>
-    <stretchAllColumns>true</stretchAllColumns>
+    <stretchLastColumn>true</stretchLastColumn>
+    <rowHeight>4</rowHeight>
     <columnset>
       <factor>Title</factor>
       <factor>Rating</factor>
@@ -34,6 +37,7 @@
       <factor>Number_of_reviews</factor>
       <factor>Times_listed</factor>
       <factor>Year</factor>
+      <factor>Summary</factor>
     </columnset>
     <sort>
       <sort>
@@ -43,13 +47,14 @@
       </sort>
     </sort>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="4" SXmlObjectID="LIST_JEUX_PAR_RATING">
+  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_JEUX_PAR_RATING">
     <repository>core</repository>
-    <alias>Jeux par rating</alias>
+    <alias>Games by rating</alias>
     <parentID>DATASET_GAMES</parentID>
     <owner>storm</owner>
     <dataFilter/>
-    <stretchAllColumns>true</stretchAllColumns>
+    <stretchLastColumn>true</stretchLastColumn>
+    <rowHeight>4</rowHeight>
     <columnset>
       <factor>Title</factor>
       <factor>Rating</factor>
@@ -57,6 +62,7 @@
       <factor>Number_of_reviews</factor>
       <factor>Times_listed</factor>
       <factor>Year</factor>
+      <factor>Summary</factor>
     </columnset>
     <sort>
       <sort>
@@ -65,27 +71,6 @@
         <breakLine>true</breakLine>
       </sort>
     </sort>
-  </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_GAMES">
-    <repository>core</repository>
-    <alias>Résumé</alias>
-    <parentID>DATASET_GAMES</parentID>
-    <owner>storm</owner>
-    <dataFilter>
-      <filter>
-        <factor>Title</factor>
-        <compare>Matches</compare>
-      </filter>
-    </dataFilter>
-    <sortable>false</sortable>
-    <stretchAllColumns>true</stretchAllColumns>
-    <showTotalForSingleLine>false</showTotalForSingleLine>
-    <showGrandTotal>false</showGrandTotal>
-    <rowHeight>7</rowHeight>
-    <columnset>
-      <factor>Summary</factor>
-    </columnset>
-    <sort/>
   </SXmlObject>
   <SXmlObject SXmlObjectTYPE="list" SXmlObjectSEQ="6" SXmlObjectID="LIST_GENRES">
     <repository>core</repository>

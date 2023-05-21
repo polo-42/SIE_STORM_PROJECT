@@ -1,126 +1,140 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="14" SXmlObjectID="DASHBOARD_GAMES">
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="30" SXmlObjectID="DASHBOARD_GAMES">
     <repository>core</repository>
+    <autoLoad>true</autoLoad>
     <data dataset="DATASET_GAMES" UID="{68f2a975-079a-4b55-a970-52d877101b27}">
       <data dataset="DATASET_GENRES" UID="{1da2f867-ddf9-4312-8975-899972309695}" link="Id:genres.id"/>
       <data dataset="DATASET_SALES" UID="{48a7f0ee-fd03-4ab8-87e7-578c1c85ed0d}" link="Id:sales.Id"/>
     </data>
     <page>
-      <alias>Résumé des jeux</alias>
+      <alias>Games informations</alias>
       <widget>
         <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
         <geometry>
           <x>0</x>
           <y>0</y>
-          <width>0.5</width>
-          <height>1</height>
+          <width>1</width>
+          <height>0.575</height>
         </geometry>
-        <view>LIST_JEUX</view>
+        <view>LIST_JEUX_PAR_RATING</view>
       </widget>
       <widget>
         <dataUID>{1da2f867-ddf9-4312-8975-899972309695}</dataUID>
         <geometry>
-          <x>0.5</x>
-          <y>0.5</y>
-          <width>0.5</width>
-          <height>0.5</height>
+          <x>0.575</x>
+          <y>0.575</y>
+          <width>0.425</width>
+          <height>0.425</height>
         </geometry>
         <view>CHART_GENRES_1</view>
       </widget>
       <widget>
         <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
         <geometry>
-          <x>0.5</x>
-          <y>0</y>
-          <width>0.5</width>
-          <height>0.5</height>
+          <x>0</x>
+          <y>0.575</y>
+          <width>0.3</width>
+          <height>0.225</height>
         </geometry>
-        <view>LIST_GAMES</view>
+        <view>KPI_NUMBER_OF_GAMES</view>
+      </widget>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.8</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_NUMBER_OF_REVIEWS</view>
+      </widget>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.3</x>
+          <y>0.8</y>
+          <width>0.275</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_NUMBER_OF_PLAYS</view>
+      </widget>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.3</x>
+          <y>0.575</y>
+          <width>0.275</width>
+          <height>0.225</height>
+        </geometry>
+        <view>KPI_GAMES</view>
       </widget>
     </page>
     <page>
-      <alias>Ratings</alias>
+      <alias>Sales</alias>
       <widget>
-        <dataUID>{1da2f867-ddf9-4312-8975-899972309695}</dataUID>
+        <dataUID>{48a7f0ee-fd03-4ab8-87e7-578c1c85ed0d}</dataUID>
         <geometry>
           <x>0</x>
           <y>0</y>
           <width>1</width>
           <height>1</height>
         </geometry>
-        <view>CHART_NOMBRE_DE_GENRE_DISTINCT</view>
+        <view>CHART_SALES_2</view>
       </widget>
     </page>
     <page>
-      <alias>Meilleurs Ratings</alias>
+      <alias>Rewies and plays per year</alias>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.5</x>
+          <y>0</y>
+          <width>0.5</width>
+          <height>1</height>
+        </geometry>
+        <view>PIVOT_GAMES_1</view>
+      </widget>
       <widget>
         <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
         <geometry>
           <x>0</x>
           <y>0</y>
-          <width>0.725</width>
+          <width>0.5</width>
           <height>1</height>
         </geometry>
-        <view>
-          <SXmlObject SXmlObjectTYPE="chart">
-            <alias>Best ratings</alias>
-            <dataFilter/>
-            <xAxis>
-              <type>category</type>
-              <title>Best 20 ratings</title>
-              <showTitle>true</showTitle>
-            </xAxis>
-            <legend>
-              <title>Best 20 ratings</title>
-              <layout>horizontal</layout>
-            </legend>
-            <series>
-              <value>
-                <type>column</type>
-                <factor>Rating</factor>
-                <dimension>Title</dimension>
-                <limitDimension>50</limitDimension>
-                <connectNulls>false</connectNulls>
-              </value>
-            </series>
-            <annotations>
-              <data><![CDATA[[
-  {
-    "labels": [
-      {
-        "point": {
-          "x": 1,
-          "y": 1
-        },
-        "text": "Some free text",
-        "backgroundColor": "darkgray",
-        "borderColor": "lightgray"
-      }
-    ]
-  }
-]]]></data>
-            </annotations>
-          </SXmlObject>
-        </view>
+        <view>PIVOT_GAMES</view>
+      </widget>
+    </page>
+    <page>
+      <alias>Ratings informations</alias>
+      <widget>
+        <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
+        <geometry>
+          <x>0.4</x>
+          <y>0</y>
+          <width>0.6</width>
+          <height>1</height>
+        </geometry>
+        <view>CHART_GAMES_2</view>
       </widget>
       <widget>
         <dataUID>{68f2a975-079a-4b55-a970-52d877101b27}</dataUID>
         <geometry>
-          <x>0.725</x>
+          <x>0</x>
           <y>0</y>
-          <width>0.275</width>
+          <width>0.4</width>
           <height>1</height>
         </geometry>
         <view>CHART_GAMES</view>
       </widget>
     </page>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="8" SXmlObjectID="DASHBOARD_GENRES">
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="12" SXmlObjectID="DASHBOARD_GENRES">
     <repository>core</repository>
     <autoLoad>true</autoLoad>
     <data dataset="DATASET_GENRES" UID="{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}"/>
     <page>
-      <alias>Les genres</alias>
+      <alias>Genres</alias>
       <widget>
         <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
         <geometry>
@@ -139,7 +153,7 @@
           <width>0.45</width>
           <height>0.625</height>
         </geometry>
-        <view>LIST_GENRES</view>
+        <view>CHART_GENRES_3</view>
       </widget>
       <widget>
         <dataUID>{c26e3d8e-4ed5-4b21-9fce-c829c2b20399}</dataUID>
@@ -153,49 +167,81 @@
       </widget>
     </page>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="6" SXmlObjectID="DASHBOARD_SALES">
+  <SXmlObject SXmlObjectTYPE="dashboard" SXmlObjectSEQ="10" SXmlObjectID="DASHBOARD_SALES">
     <repository>core</repository>
+    <autoLoad>true</autoLoad>
     <data dataset="DATASET_SALES" UID="{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}"/>
     <page>
-      <alias>Résumé des ventes</alias>
+      <alias>Total Sales Visualisation</alias>
       <widget>
         <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
         <geometry>
-          <x>0</x>
-          <y>0</y>
-          <width>1</width>
-          <height>1</height>
+          <x>0.3</x>
+          <y>0.5</y>
+          <width>0.7</width>
+          <height>0.5</height>
         </geometry>
-        <view>
-          <SXmlObject SXmlObjectTYPE="list">
-            <dataFilter/>
-            <columnset>
-              <factor>Id</factor>
-              <factor>North_America_Sales</factor>
-              <factor>Europe_Sales</factor>
-              <factor>Japan_Sales</factor>
-              <factor>Other_Sales</factor>
-              <factor>Global_Sales</factor>
-            </columnset>
-            <sort/>
-          </SXmlObject>
-        </view>
+        <view>CHART_SALES_5</view>
       </widget>
-    </page>
-    <page>
-      <alias>Profits générés</alias>
-    </page>
-    <page>
-      <alias>Ventes totales par régions</alias>
       <widget>
         <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
         <geometry>
-          <x>0</x>
+          <x>0.3</x>
           <y>0</y>
-          <width>1</width>
-          <height>1</height>
+          <width>0.7</width>
+          <height>0.5</height>
         </geometry>
         <view>CHART_SALES</view>
+      </widget>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_SALES</view>
+      </widget>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.4</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_EUROPE_SALES</view>
+      </widget>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.2</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_NORTH_AMERICA_SALES</view>
+      </widget>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.6</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_JAPAN_SALES</view>
+      </widget>
+      <widget>
+        <dataUID>{d98e64d5-bb6a-4ad3-a2ae-4462514bdff1}</dataUID>
+        <geometry>
+          <x>0</x>
+          <y>0.8</y>
+          <width>0.3</width>
+          <height>0.2</height>
+        </geometry>
+        <view>KPI_TOTAL_SALES_IN_OTHER_COUNTRIES</view>
       </widget>
     </page>
   </SXmlObject>

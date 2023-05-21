@@ -1,5 +1,5 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectID="DATASET_GAMES">
+  <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectSEQ="3" SXmlObjectID="DATASET_GAMES">
     <repository>core</repository>
     <parentID>games</parentID>
     <defaultDashboard>DASHBOARD_GAMES</defaultDashboard>
@@ -17,6 +17,7 @@
         <dataset>DATASET_SALES</dataset>
         <link>Id:sales.Id</link>
       </drilldown>
+      <drilldown/>
     </drilldown>
   </SXmlObject>
   <SXmlObject SXmlObjectTYPE="dataset" SXmlObjectID="DATASET_GENRES">

@@ -1,0 +1,95 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="4" SXmlObjectID="KPI_NUMBER_OF_GAMES">
+    <repository>core</repository>
+    <alias>Number of games</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter>
+      <filter/>
+      <filter/>
+    </dataFilter>
+    <factor>Id</factor>
+    <expression>COUNT_DISTINCT</expression>
+    <rightPad>Games</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectID="KPI_NUMBER_OF_PLAYS">
+    <repository>core</repository>
+    <alias>Number of plays</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Plays</factor>
+    <expression>SUM</expression>
+    <rightPad>Plays</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="10" SXmlObjectID="KPI_NUMBER_OF_REVIEWS">
+    <repository>core</repository>
+    <alias>Number of reviews</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Number_of_reviews</factor>
+    <expression>SUM</expression>
+    <rightPad>Reviews</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="3" SXmlObjectID="KPI_GAMES">
+    <repository>core</repository>
+    <alias>Number of times listed in wishlist</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Wishlist</factor>
+    <expression>SUM</expression>
+    <rightPad>Times listed in wishlist</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="1" SXmlObjectID="KPI_SALES">
+    <repository>core</repository>
+    <alias>Global total Sales</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Global_Sales</factor>
+    <expression>SUM</expression>
+    <rightPad>Million $</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="2" SXmlObjectID="KPI_NORTH_AMERICA_SALES">
+    <repository>core</repository>
+    <alias>North America total Sales</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>North_America_Sales</factor>
+    <expression>SUM</expression>
+    <rightPad>Million $</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="1" SXmlObjectID="KPI_EUROPE_SALES">
+    <repository>core</repository>
+    <alias>Europe total Sales</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Europe_Sales</factor>
+    <expression>SUM</expression>
+    <rightPad>Million $</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectSEQ="2" SXmlObjectID="KPI_JAPAN_SALES">
+    <repository>core</repository>
+    <alias>Japan total Sales</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Japan_Sales</factor>
+    <expression>SUM</expression>
+    <rightPad>Million $</rightPad>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="kpi" SXmlObjectID="KPI_TOTAL_SALES_IN_OTHER_COUNTRIES">
+    <repository>core</repository>
+    <alias>Total Sales in other Countries</alias>
+    <parentID>DATASET_SALES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <factor>Other_Sales</factor>
+    <expression>SUM</expression>
+    <rightPad>Million $</rightPad>
+  </SXmlObject>
+</storm>

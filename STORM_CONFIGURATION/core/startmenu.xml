@@ -1,14 +1,20 @@
 <storm>
-  <SXmlObject SXmlObjectTYPE="startmenu" SXmlObjectSEQ="2" SXmlObjectID="STARTMENU_START">
+  <SXmlObject SXmlObjectTYPE="startmenu" SXmlObjectSEQ="6" SXmlObjectID="STARTMENU_START">
     <repository>core</repository>
-    <node alias="Informations sur les jeux" SXmlObjectID="G">
-      <alias>Informations sur les jeux</alias>
-      <node dashboard="DASHBOARD_GAMES"/>
-      <node dashboard="DASHBOARD_GENRES"/>
+    <node alias="Games informations" SXmlObjectID="G">
+      <alias>Games informations</alias>
+      <node icon="fa/house-chimney-user/solid" dashboard="DASHBOARD_GAMES">
+        <icon>fa/house-chimney-user/solid</icon>
+      </node>
     </node>
-    <node alias="Informations sur les ventes" SXmlObjectID="S">
-      <alias>Informations sur les ventes</alias>
-      <node dashboard="DASHBOARD_SALES"/>
+    <node alias="General informations" SXmlObjectID="S">
+      <alias>General informations</alias>
+      <node icon="fa/info-circle/solid" dashboard="DASHBOARD_GENRES">
+        <icon>fa/info-circle/solid</icon>
+      </node>
+      <node icon="fa/info-circle/solid" dashboard="DASHBOARD_SALES">
+        <icon>fa/info-circle/solid</icon>
+      </node>
     </node>
   </SXmlObject>
 </storm>

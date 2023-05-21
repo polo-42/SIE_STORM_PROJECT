@@ -1,0 +1,65 @@
+<storm>
+  <SXmlObject SXmlObjectTYPE="pivot" SXmlObjectSEQ="3" SXmlObjectID="PIVOT_GAMES">
+    <repository>core</repository>
+    <alias>Number of plays per year</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <rows>
+      <sort>total-down</sort>
+      <split>
+        <factor>Year</factor>
+      </split>
+      <split>
+        <factor>Title</factor>
+      </split>
+    </rows>
+    <columns>
+      <total>false</total>
+      <split/>
+    </columns>
+    <value>
+      <factor>Plays</factor>
+    </value>
+    <chart>
+      <enabled>true</enabled>
+      <type>bar</type>
+      <mergeValueAxes>true</mergeValueAxes>
+      <reversedStacks>true</reversedStacks>
+      <colorByPoint>true</colorByPoint>
+      <connectNulls>true</connectNulls>
+      <useRows>true</useRows>
+    </chart>
+  </SXmlObject>
+  <SXmlObject SXmlObjectTYPE="pivot" SXmlObjectSEQ="2" SXmlObjectID="PIVOT_GAMES_1">
+    <repository>core</repository>
+    <alias>Number of reviwes per year</alias>
+    <parentID>DATASET_GAMES</parentID>
+    <owner>storm</owner>
+    <dataFilter/>
+    <rows>
+      <sort>total-down</sort>
+      <split>
+        <factor>Year</factor>
+      </split>
+      <split>
+        <factor>Title</factor>
+      </split>
+    </rows>
+    <columns>
+      <total>false</total>
+    </columns>
+    <value>
+      <factor>Number_of_reviews</factor>
+    </value>
+    <chart>
+      <enabled>true</enabled>
+      <type>bar</type>
+      <mergeValueAxes>true</mergeValueAxes>
+      <reversedStacks>true</reversedStacks>
+      <colorByPoint>true</colorByPoint>
+      <connectNulls>true</connectNulls>
+      <useRows>true</useRows>
+    </chart>
+  </SXmlObject>
+</storm>
