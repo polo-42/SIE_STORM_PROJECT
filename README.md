@@ -4,6 +4,12 @@ Ce dossier contient :
 - les fichiers de configuration pour notre projet de BI effectué sur Storm (STORM_CONFIGURATION)
 - les fichiers csv et scripts python utilisés pour créer notre base de données (DATA_MANAGEMENT)
 
+## Recréer le projet
+1. Importer la bases de données mySQL depuis le fichier games.sql
+2. Importer le projet storm : upload project + SIE_STORM_PROJECT > STORM_CONFIGURATION
+3. Changer la config avec les informations de la bases de données que vous avez recréer au point 1 (changer user, password, host et dbs)
+4. Explorer notre projet.
+
 ## DATA_MANAGEMENT
 Pour rendre notre dataset utilisable par storm, nous avons du :
 - formater les chiffres de la table games (transformer 30K en 30000, etc.)
@@ -18,12 +24,8 @@ Ensuite, les fichiers csv ont été transformé en sql et importé dans la base 
 ## STORM_CONFIGURATION
 Il s'agit de la configuration de notre projet storm.
 
-**Attention : LA CONNEXION A LA BASE DE DONNEES NECESSITE D'AJOUTER VOTRE IP DANS LES IPs DE CONFIANCE DE NOTRE SERVEUR**, veuillez nous contacter.
+**Attention : LA CONNEXION A LA BASE DE DONNEES NECESSITE D'AJOUTER VOTRE IP DANS LES IPs DE CONFIANCE DE NOTRE SERVEUR**. 
+
+Dans l'état, le projet ne pourra pas charger les données. Pour se faire voir la section : Recréer le projet.
 
 En important cette configuration, vous pouvez essayer le projet et ces dashboards. 
-
-Afin de pouvoir visualiser notre projet sur Storm : 
-1. Cliquez sur "ouvrir projet" sur Storm. 
-2. Puis ouvrez le fichier SIE_STORM_PROJECT > STORM_CONFIGURATION > project.xml
-3. Vous pouvez ensuite vous connecter avec l'utilisateur "storm" (sans mot de passe).
-4. Explorer notre projet.
