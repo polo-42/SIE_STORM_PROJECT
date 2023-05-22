@@ -21,6 +21,10 @@ Pour rendre notre dataset utilisable par storm, nous avons du :
 
 Ensuite, les fichiers csv ont été transformé en sql et importé dans la base de données distante.
 
+Le schéma du dataset dans Storm : 
+
+<img src="./.img/schema.png" alt="Storm Schema" style="height:500px;" />
+
 ## STORM_CONFIGURATION
 Il s'agit de la configuration de notre projet storm.
 
@@ -29,3 +33,20 @@ Il s'agit de la configuration de notre projet storm.
 Dans l'état, le projet ne pourra pas charger les données. Pour se faire voir la section : Recréer le projet.
 
 En important cette configuration, vous pouvez essayer le projet et ces dashboards. 
+
+### Screenshots des dashboards
+
+#### Dashboard games avec une sélection des 50 meilleurs jeux et le wordcloud des genres liés aux jeux
+<img src="./.img/games.png" alt="Dashboard Storm games" style="height:500px;" />
+
+#### Page ratings des jeux
+<img src="./.img/ratings.png" alt="Dashboard Storm games" style="height:500px;" />
+
+#### Page reviews des jeux
+<img src="./.img/reviews.png" alt="Dashboard Storm games" style="height:500px;" />
+
+#### Dashboard genres représentant les genres les plus représentés pour nos jeux
+<img src="./.img/genres.png" alt="Dashboard Storm games" style="height:500px;" />
+
+#### Dashboard sales représentatn les ventes totales du secteur jeu vidéo selon les régions
+<img src="./.img/sales.png" alt="Dashboard Storm games" style="height:500px;" />
