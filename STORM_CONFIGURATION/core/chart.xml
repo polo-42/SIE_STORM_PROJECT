@@ -423,7 +423,7 @@
 ]]]></data>
     </annotations>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="15" SXmlObjectID="CHART_SALES_5">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="16" SXmlObjectID="CHART_SALES_5">
     <repository>core</repository>
     <alias>Sales importance by region</alias>
     <parentID>DATASET_SALES</parentID>
@@ -442,11 +442,11 @@
     <series>
       <value>
         <type>packedbubble</type>
-        <factor>North_America_Sales</factor>
+        <factor>Europe_Sales</factor>
       </value>
       <value>
         <type>packedbubble</type>
-        <factor>Europe_Sales</factor>
+        <factor>North_America_Sales</factor>
       </value>
       <value>
         <type>packedbubble</type>
@@ -511,25 +511,29 @@
 ]]]></data>
     </annotations>
   </SXmlObject>
-  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="3" SXmlObjectID="CHART_GAMES_2">
+  <SXmlObject SXmlObjectTYPE="chart" SXmlObjectSEQ="17" SXmlObjectID="CHART_GAMES_2">
     <repository>core</repository>
     <alias>More represented ratings</alias>
     <parentID>DATASET_GAMES</parentID>
     <owner>storm</owner>
     <dataFilter/>
     <xAxis>
+      <dimension>Rating</dimension>
       <type>category</type>
     </xAxis>
     <legend>
       <layout>horizontal</layout>
     </legend>
+    <options3d>
+      <alpha>0</alpha>
+      <beta>0</beta>
+    </options3d>
     <series>
       <value>
-        <type>wordcloud</type>
+        <type>column</type>
         <factor>1</factor>
         <dimension>Rating</dimension>
         <limitDimension>40</limitDimension>
-        <colorByPoint>true</colorByPoint>
       </value>
     </series>
     <annotations>
